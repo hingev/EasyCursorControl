@@ -7,6 +7,7 @@ int main (void) {
   int x, y;
   cn_vert (1);
   while (1) {
+    cn_pos (1,1);
     c_eraseScreen ();
     printf ("Enter vertical line number: ");
     scanf ("%d", &y);
