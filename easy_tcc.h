@@ -1,5 +1,5 @@
 
-/* Easy terminal cursor controller */
+/* Easy terminal cursor controllerb */
 #ifndef __EASY_TCC__
 #define __EASY_TCC__
 
@@ -23,6 +23,13 @@
 #define c_backward() { cn_backward (1); }
 #define c_nextLine() { cn_nextLine (1); }
 #define c_prevLine() { cn_prevLine (1); }
+#define c_eraseScreen() { cn_eraseScreen (ENTIRE_SCREEN); }
+#define c_eraseLine() { cn_eraseLine (ENTIRE_LINE); }
+
+#define CURSOR_TO_END 0
+#define CURSOR_TO_BEGINNING 1
+#define ENTIRE_SCREEN 2
+#define ENTIRE_LINE 2
 
 void cn_up (int n);
 void cn_down (int n);
@@ -33,5 +40,7 @@ void cn_prevLine (int n);
 void cn_horiz (int x);
 void cn_vert (int y);
 void cn_pos (int x, int y);
+void cn_eraseScreen (int p);
+void cn_eraseLine (int p);
 
 #endif

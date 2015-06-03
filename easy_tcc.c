@@ -38,3 +38,11 @@ void cn_vert (int y){
 void cn_pos (int x, int y){
   _DEF_FUNC ("%d;%dH", y, x);
 }
+
+void cn_eraseScreen (int p) {
+  _DEF_FUNC ("%dJ", p);
+}
+
+void cn_eraseLine (int p) {
+  _DEF_FUNC ("%dK", p);
+}
