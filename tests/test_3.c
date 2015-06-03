@@ -40,6 +40,7 @@ int main (void) {
   
   fflush (stdout);
   scanf ("%s", temp);
+  c_eraseScreen ();
   
   return 0;
   
