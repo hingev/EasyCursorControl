@@ -18,31 +18,31 @@ int main (void) {
   usleep (500000L);  
   c_eraseScreen ();
   int i = 0;
-  cn_vert (1);
+  //cn_vert (1);
   
   for (i=1; i<15; ++i) {
-    printf ("Vert: %i", i);
     cn_vert (i);
+    printf ("Vert: %i", i);
     fflush (stdout);
     usleep (100000L);
   }
 
   c_eraseScreen ();
   cn_vert (0);
-  for (i=0; i<30; ++i) {
+  for (i=1; i<=30; ++i) {
     putc ((i%10)+'0', stdout);
   }
   fflush (stdout);
 
-  for (i=0; i<30; ++i) {
+  for (i=1; i<=30; ++i) {
     cn_horiz (i);
     putc ('-', stdout);
     fflush (stdout);
     usleep (100000L);
   }
 
-  for (i=0; i<30; ++i) {
-    cn_pos (i, 1);
+  for (i=1; i<=30; ++i) {
+    cn_pos (i, 0);
     putc ((i%10)+'0', stdout);
     fflush (stdout);
     usleep (100000L);

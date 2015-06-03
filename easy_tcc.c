@@ -30,8 +30,6 @@ void cn_horiz (int x){
 }
 
 void cn_vert (int y){
-  if (y == 1)
-    y = 0;
   _DEF_FUNC ("%dH", y);
 }
 
